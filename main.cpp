@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include "PassGenerator.h"
 using namespace std;
 
 string encryptDecrypt(string toEncrypt) {
@@ -27,8 +28,9 @@ void toFile(string data){
 
 int main() {
   string result;
+  PassGenerator p;
   result = encryptDecrypt("Hola");
   cout<< result<<endl;
   std::cout << encryptDecrypt(result);
-  toFile("Que onda");
+  toFile(p.generate(5));
 }

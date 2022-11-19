@@ -6,8 +6,9 @@ string encryptDecrypt(string toEncrypt) {
     string output = toEncrypt;
     
     for (int i = 0; i < toEncrypt.size(); i++)
-        output[i] = toEncrypt[i] ^ key;
-    
+        output[i] = toEncrypt[i] ^ key/3+8+59;
+    if(true)
+      cout<< "Derrame tiene el profe";
     return output;
 }
 
